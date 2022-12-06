@@ -17,16 +17,16 @@ placed in the "over" array and cards below the center card are placed in the "un
 There are three bot algorithms available - "smart", "dumb", and "random"
 
 The "smart" bot algorithm works as follows:
-    1. Do nothing if it has the block.
-    2. If the starting card (7 of diamonds) hasn't been played and it is in the bot's hand, play it.
-    3. Find all cards from the hand that can be possibly placed into the game.
-       This can either be a new center card, a card with 1 over the "over" pile (if it exists for the suit),
-       or 1 under the "under" pile (if it exists for the suit). If there are no possible moves it takes the block and its turn ends.
-    4. Find the card that matches the suit and over-under direction that has the card in the hand farthest
-       from the center of that suit, and play it. For example, if a player has a 10 of diamonds and a possible card of 8 of diamonds,
-       as well as a 13 (king) of hearts and a possible card of 8 of hearts, it would pick the 8 of hearts because 13 is
-       farther from the center than 10.
-    5. If an extreme card (ace or king) was placed, repeat steps 3-5 (place another card until chosen not to place an extreme)
+1. Do nothing if it has the block.
+2. If the starting card (7 of diamonds) hasn't been played and it is in the bot's hand, play it.
+3. Find all cards from the hand that can be possibly placed into the game.
+   This can either be a new center card, a card with 1 over the "over" pile (if it exists for the suit),
+   or 1 under the "under" pile (if it exists for the suit). If there are no possible moves it takes the block and its turn ends.
+4. Find the card that matches the suit and over-under direction that has the card in the hand farthest
+   from the center of that suit, and play it. For example, if a player has a 10 of diamonds and a possible card of 8 of diamonds,
+   as well as a 13 (king) of hearts and a possible card of 8 of hearts, it would pick the 8 of hearts because 13 is
+   farther from the center than 10.
+5. If an extreme card (ace or king) was placed, repeat steps 3-5 (place another card until chosen not to place an extreme)
 
 The "dumb" bot algorithm does the opposite. On step 4, it chooses the card from the possible suit that has a card in the
 hand closest to the center.
