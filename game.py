@@ -13,13 +13,13 @@ from bot import *
 
 def clearConsole():
     command = 'clear'
-    if os.name in ('nt', 'dos'):  # If Machine is running on Windows, use cls
+    if os.name in ('nt', 'dos'):
         command = 'cls'
     os.system(command)
 
 def gamestate_str(gamestate):
     """returns a string representation of a gamestate"""
-    normal_suits = ["diamonds", "spades", "hearts", "clubs"]
+    normal_suits = ["d", "s", "h", "c"]
 
     rows = ""
     for suit in gamestate:
