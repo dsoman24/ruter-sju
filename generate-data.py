@@ -26,7 +26,36 @@ def clearConsole():
         command = 'cls'
     os.system(command)
 
-header = "numPlayers,numSmart,numDumb,numRandom,game,turns,rounds,playerName,kind,cardsDealt,roundsPlayer,startingPosition,finalPosition,timesBlockTaken,totalRoundsWithBlock,totalRoundsWithBlockProp,mostRoundsWithBlock,mostRoundsWithBlockProp,turnWithFirstBlock,turnWithFirstBlockProp,numCenter,numOpener,numExtremes"
+
+categories = [
+    "numPlayers",
+    "numSmart",
+    "numDumb",
+    "numRandom",
+    "game",
+    "turns",
+    "rounds",
+    "playerName",
+    "kind",
+    "cardsDealt",
+    "roundsPlayer",
+    "startingPosition",
+    "finalPosition",
+    "timesBlockTaken",
+    "totalRoundsWithBlock",
+    "totalRoundsWithBlockProp",
+    "mostRoundsWithBlock",
+    "mostRoundsWithBlockProp",
+    "turnWithFirstBlock",
+    "turnWithFirstBlockProp",
+    "numCenter",
+    "numOpener",
+    "numExtremes"
+]
+
+header = ""
+for category in categories:
+    header += category + ","
 for suit in range(numSuits):
     header += f",suit{suit}Extremes"
 header += "\n"
